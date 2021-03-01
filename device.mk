@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.recovery.target.rc
 
+# Wifi Overlay
+PRODUCT_PACKAGES += \
+    OnePlus8PWifiOverlay
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Inherit from oneplus sm8250-common
