@@ -22,7 +22,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
 # Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
+
+#GAPPS
+TARGET_GAPPS_ARCH := arm64
+WITH_GMS := true
+
+# ArcanaOS
+ARCANA_DEVICE := Oneplus-8pro
+ARCANA_MAINTAINER := Akarsh
+WITH_GAPPS := true
+WITH_LAWNCHAIR := true
+
+# Blur
+TARGET_USES_BLUR := true
+
+# In Display Fingerprint Animations
+EXTRA_UDFPS_ANIMATIONS := true
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
